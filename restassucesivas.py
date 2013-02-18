@@ -2,9 +2,9 @@ class Restas:
 	def __init__(self,divisor,dividendo):
 		self.divisor = float(divisor)
 		self.dividendo = float(dividendo)
-	def division(self):
+	def division(self,i):
+		self.getInfoDivi()
 		bucles = 0
-		decimal = 0.0
 		dividendo = self.dividendo
 		divisor = self.divisor
 		if divisor == 0:
@@ -16,8 +16,11 @@ class Restas:
 			dividendo = dividendo - divisor
 			bucles = bucles + 1
 		
-		decimal = ((dividendo*100)/divisor)
-		print "Bucles Utilizados %d",bucles,dividendo,decimal
+
+		print "Cosciente: ",bucles
+		print "Reciduo: ", dividendo
+	def getInfoDivi(self):
+		print str(self.dividendo) + " / " + str(self.divisor)
 		
 restar = Restas(6,10)
-restar.division()
+restar.division(0)
